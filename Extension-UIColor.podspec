@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "Very helpful functions"
   s.description  = "extension class UIColor, some very helpful functions(for iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+)"
   s.homepage     = "https://github.com/iyongzai/Extension-UIColor"
-  s.license      = "MIT"
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Tyler.Yin" => "yinzhiyongyzy@126.com" }
 
 
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/iyongzai/Extension-UIColor.git", :tag => s.version.to_s }
 
-  s.source_files  = "Extension-UIColor/Extension-UIColor.swift"
+  s.source_files  = "Extension-UIColor/*.swift"
 
   s.frameworks = "Foundation", "UIKit"
 
