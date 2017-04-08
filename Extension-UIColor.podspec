@@ -9,14 +9,14 @@ Pod::Spec.new do |s|
 
 
   s.ios.deployment_target = "8.0"
-  s.osx.deployment_target = "10.10"
-  s.watchos.deployment_target = "2.0"
-  s.tvos.deployment_target = "9.0"
+  # s.osx.deployment_target = "10.10"
+  # s.watchos.deployment_target = "2.0"
+  # s.tvos.deployment_target = "9.0"
 
 
-  s.source       = { :git => "https://github.com/iyongzai/Extension-UIColor.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/iyongzai/Extension-UIColor.git", :tag => s.version.to_s }
 
-  s.source_files  = "Extension-UIColor/*"
+  s.source_files  = "Extension-UIColor/Extension-UIColor.swift"
 
   s.frameworks = "Foundation", "UIKit"
 
