@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,69 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ytx-13-UJH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.38431372549019605" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Rkk-NZ-jdB"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入十六进制颜色值(eg:#f76299)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eI-hS-6uZ">
+                                <rect key="frame" x="16" y="84" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OBm-pg-N7o"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DU3-x0-gqS">
+                                <rect key="frame" x="147" y="134" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SHb-xs-CEU"/>
+                                    <constraint firstAttribute="width" constant="80" id="WMJ-Iz-5Pa"/>
+                                </constraints>
+                                <state key="normal" title="改变颜色"/>
+                                <connections>
+                                    <action selector="changeColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4PB-yu-56B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F92-M3-Vle">
+                                <rect key="frame" x="147" y="194" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Qm4-7O-wgp"/>
+                                    <constraint firstAttribute="height" constant="40" id="bLH-ID-ywq"/>
+                                </constraints>
+                                <state key="normal" title="随机颜色"/>
+                                <connections>
+                                    <action selector="randColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EsD-cz-PSC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DU3-x0-gqS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2fR-f2-gh9"/>
+                            <constraint firstItem="F92-M3-Vle" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="91W-81-VlB"/>
+                            <constraint firstItem="DU3-x0-gqS" firstAttribute="top" secondItem="7eI-hS-6uZ" secondAttribute="bottom" constant="20" id="ZmQ-GT-KyP"/>
+                            <constraint firstItem="7eI-hS-6uZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aVl-xh-nKZ"/>
+                            <constraint firstItem="7eI-hS-6uZ" firstAttribute="top" secondItem="Ytx-13-UJH" secondAttribute="bottom" constant="20" id="cvX-3N-tTh"/>
+                            <constraint firstItem="7eI-hS-6uZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jLd-pm-wHh"/>
+                            <constraint firstItem="Ytx-13-UJH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jqY-73-ai3"/>
+                            <constraint firstItem="Ytx-13-UJH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kbV-bt-E0a"/>
+                            <constraint firstAttribute="trailing" secondItem="Ytx-13-UJH" secondAttribute="trailing" id="w6s-Fk-aVO"/>
+                            <constraint firstItem="F92-M3-Vle" firstAttribute="top" secondItem="DU3-x0-gqS" secondAttribute="bottom" constant="20" id="xlx-KS-SU7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorButton" destination="DU3-x0-gqS" id="XL0-91-Yxa"/>
+                        <outlet property="colorTextField" destination="7eI-hS-6uZ" id="WnJ-yd-sFX"/>
+                        <outlet property="colorView" destination="Ytx-13-UJH" id="R5p-Cw-d6m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-513" y="-123"/>
         </scene>
     </scenes>
 </document>
