@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Extension-UIColor"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "Very helpful functions"
   s.description  = "extension class UIColor, some very helpful functions(for iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+)"
   s.homepage     = "https://github.com/iyongzai/Extension-UIColor"
