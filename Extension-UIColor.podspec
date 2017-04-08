@@ -17,15 +17,14 @@ Pod::Spec.new do |s|
 
   s.name         = "Extension-UIColor"
   s.version      = "0.0.1"
-  s.summary      = "extension class UIColor, some very helpful functions(for iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+)"
+  s.summary      = "Very helpful functions"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  s.description  = "extension class UIColor, some very helpful functions(for iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+)"
 
   s.homepage     = "https://github.com/iyongzai/Extension-UIColor"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -79,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/iyongzai/Extension-UIColor.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/iyongzai/Extension-UIColor.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Extension-UIColor", "Extension-UIColor/**/*.{swift}"
+  s.source_files  = "Extension-UIColor/*"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -117,7 +116,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = "Foundation", "UIKit"
+  # s.frameworks = "Foundation", "UIKit"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
